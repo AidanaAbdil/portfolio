@@ -3,7 +3,7 @@ import { Divider, Flex, Tag } from "antd";
 export default function Skills() {
   return (
     <section id="skills">
-      <div class="container">
+      <div className="container">
         <Flex gap="4px 0" wrap>
           <Tag bordered={false} color="processing">
             HTML

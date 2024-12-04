@@ -27,6 +27,23 @@ i {
 }
 
 /* General Styles */
+
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
 * {
   margin: 0;
   padding: 0;
@@ -37,12 +54,19 @@ i {
 html,
 body {
   height: 100%;
+  
 }
 
-body {
-  background-color: #f4f4f9;
-  color: #333;
-  font-size: 16px;
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  /* Full viewport height */
+}
+
+main {
+  flex-grow: 1;
+  /* Ensures the main content stretches to fill remaining space */
 }
 
 /* Container for centering and padding */
@@ -85,73 +109,86 @@ nav ul li a:hover {
 
 
 
-/* Home Section */
 #home {
-  background-color: #007bff;
-  color: #fff;
-  text-align: center;
-  padding: 60px 0;
-}
-
-#home h1 {
-  font-size: 3rem;
-  font-weight: bold;
-}
-
-#home p {
-  font-size: 1.2rem;
-  margin-top: 10px;
-}
-
-/* About Section */
-#about {
-  background-color: #fff;
-  color: #333;
-  text-align: center;
-  padding: 40px 0;
-}
-
-#about h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-}
-
-#about p {
-  font-size: 1rem;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-/* Skills Section */
-#skills {
-  background-color: #f9f9f9;
-  /* Light background color */
-  color: #333;
-  /* Text color */
-  padding: 40px 0;
-  /* Spacing around the section */
-  text-align: center;
-}
-
-#skills h2 {
-  font-size: 2rem;
-  /* Heading size */
-  margin-bottom: 20px;
-  /* Space below heading */
-}
-
-/* Container for Tags */
-#skills .container {
+  height: 100vh;
+  /* Full viewport height */
   display: flex;
-  flex-wrap: wrap;
-  /* Allow wrapping for smaller screens */
   justify-content: center;
-  /* Center-align tags */
-  gap: 8px;
-  /* Space between tags */
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(135deg, #f0f4f8, #e8eff5);
+  /* Subtle gradient */
+  color: #333;
 }
 
-/* Tag Styles */
+.container {
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+h1 {
+  font-size: 4rem;
+  /* Large font size */
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 1.5rem;
+  margin: 10px 0;
+  line-height: 1.6;
+}
+
+#about {
+  height: 100vh;
+  /* Full viewport height */
+  display: flex;
+  align-items: center;
+  /* Center vertically */
+  justify-content: space-between;
+  /* Spread items horizontally */
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.about-me-container {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.about-left-side,
+.resume-right-side {
+  flex: 1;
+  /* Equal width for both columns */
+  margin: 0 1rem;
+  box-sizing: border-box;
+}
+
+.about-left-side {
+  max-width: 50%;
+  /* Ensures the left side doesn’t exceed half the container width */
+}
+
+.resume-right-side {
+  max-width: 50%;
+  /* Ensures the right side doesn’t exceed half the container width */
+}
+
+.about-left-side h2,
+.resume-right-side h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.about-left-side p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+
+
+
+
 .tag {
   display: inline-block;
   /* Inline-block for flexibility */

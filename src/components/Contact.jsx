@@ -11,27 +11,27 @@ function Contact () {
           </p>
         </div>
 
-        <div class="social-links">
+        <div className="social-links">
           <a
             href="https://www.linkedin.com/in/aidanaabdilkyzy"
             target="_blank"
-            class="social-icon"
+            className="social-icon"
           >
-            <i class="fab fa-linkedin"></i>
+            <i className="fab fa-linkedin"></i>
           </a>
           <a
             href="https://github.com/AidanaAbdil"
             target="_blank"
-            class="social-icon"
+            className="social-icon"
           >
-            <i class="fab fa-github"></i>
+            <i className="fab fa-github"></i>
           </a>
           <a
             href="https://www.instagram.com/aboutaidana"
             target="_blank"
-            class="social-icon instagram"
+            className="social-icon instagram"
           >
-            <i class="fab fa-instagram"></i>
+            <i className="fab fa-instagram"></i>
           </a>
         </div>
       </section>
